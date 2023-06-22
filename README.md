@@ -1,5 +1,7 @@
 # azure-gpt-indexing
 
+Cet outil est basé de la libraire llama index.
+
 Outil réalisant le questionnement de documents à partir d'appel d'API OpenAI via Azure.
 
 Se référer à la page portal innoOpenAi dans portal.azure.com
