@@ -16,8 +16,14 @@ Si deux documents sont mis dans le dossier data, l'outil va les mettre dans un s
 
 Avoir d’installé python 10
 
+Créer les instances d'IA dans Azure:
+   - Créer Azure OpenAI
+      - créer les modèles de déploiments d'embedding (ada-embedding) et de chat (gpt35turbo ou mieux)
+   - Créer Azure App service sous python 3.10
+
 Avoir un environnement jupyter d'installé si vous voulez lancer le fichier .ipynb (utile pour faire des tests)
 
+(Pas obligatoire car ne fonctionne pas si on veut déployer sur la web app Azure, mais préférable le reste du temps)
 Modifier le `.env.sample` avec les bonnes variables puis renommer le fichier en `.env`.
 ```
 OPENAI_API_KEY=api_key (clé api trouvable dans le groupe innoopenai puis "keys and endpoint")
@@ -27,8 +33,6 @@ OPENAI_API_BASE=https://xxxx.openai.azure.com/ (trouvable aussi dans "key and en
 # Explications
 
 Placez tous vos fichiers dans le répertoire `data`.
-
-Pour l'instant, il vaut mieux ne rentrer qu'un seul fichier.
 
 Les extensions prises en charge sont les suivantes (dont je suis quasi sûr sont):
 
@@ -67,7 +71,3 @@ Modifier le prompt template pour définir comment on veut qu'il agisse.
 # Execution du programme
 
 Le programme s'utilise dans le fichier jupyter ou via le terminal avec le fichier python.
-
-# Note
-
-C'est le programme le plus rapide qu'on a actuellement vu que les modèles tournent sur les serveurs Azure.
